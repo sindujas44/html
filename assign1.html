@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Stock Trading App</title>
+<script>
+function Check()
+{
+var quantity = document.forms['App']['quantity'].value;
+quantity=parseInt(quantity);
+if(!(quantity >10 && quantity<100 && quantity%10==0))
+{
+ alert("ENTER A VALID QUANTITY");
+}
+}
+
+</script>
+</head>
+<body>
+<table border="1">
+<tr>
+  <th> Ticker </th>
+  <th> Price  </th>
+</tr>  
+<tr>
+  <td> Wipro </td>
+  <td> 298.45 </td>
+</tr>
+<tr>
+  <td> Infy </td>
+  <td> 949.95 </td>
+</tr>
+<tr>
+  <td> Tcs </td>
+  <td> 2713.70 </td>
+</tr>
+<tr>
+  <td> TechM </td>
+  <td> 485.85 </td>
+</tr>
+</table>
+<br>
+<h1> Stock Trading </h1>
+<table border="1">
+<tr>
+  <td> Ticker: </td>
+  <td> <select> <option value="WIPRO"> WIPRO </option>
+                <option value="INFY"> INFY </option>
+                <option value="TCS"> TCS </option>
+                <option value="TECHM"> TECHM </option>
+  </select></td>
+</tr>
+<tr>
+    <td> Quantity: </td>
+     <form name="App" onsubmit="Check()">
+    <td> <input type="text" id="quantity" name="quantity">
+   </td>
+</tr>
+<tr>
+<td>
+<button type="submit" value="submit"> Submit </button>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+

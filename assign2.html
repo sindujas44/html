@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head><center><b><font size="6"> Xena Events </font></b></center>
+<style>
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+   }
+</style>
+<script>
+function check(name)
+{
+ var name = document.forms['Event']['name'].value;
+ var age = document.forms['Event']['age'].value;
+ var email= document.forms['Event']['email'].value;
+if(!name.match(/^[A-Za-z]+$/))
+{
+ alert("ALPHABETS ONLY");
+}
+if(parseInt(age) <18)
+{
+alert("Age should be greater than or equal to 18");
+}
+if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/))
+{
+alert("Not a valid email address");
+}
+}
+</script>
+</head>
+<br>
+<br>
+<body>
+<img src="http://www.celestialgifts.co.za/images/detailed/333/shutterstock_368208392.jpg" width="400" height="200">
+<br><br>
+<form name="Event" align="middle" onsubmit="check()">
+   Name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="name" name="name"><br><br>
+
+   Age: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="age" name="age"><br><br>
+   email-ID: &nbsp;<input type="text" id="email" name="email"><br><br>
+   City: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input list="city"  name="city">
+   <datalist id="city">
+   <option value="Vizag">
+   <option value="Rajkot">
+   <option value="Bangalore">
+   </datalist>
+   <br><br>
+   <button type="submit" onclick="check()"> Register </button>
+</form>
+</body>
+</html>
